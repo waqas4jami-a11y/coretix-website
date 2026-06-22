@@ -96,7 +96,7 @@ const demos = [
       </header>
 
       <section className="bg-gradient-to-br from-white via-[#F8FAFC] to-[#F3F0FF]">
-        <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 py-10 md:px-5 md:py-14 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 px-8 py-10 md:px-10 md:py-14 lg:px-16 lg:grid-cols-2">
           <div>
             <div className="inline-flex rounded-full border border-blue-100 bg-white px-4 py-2 text-[11px] font-black uppercase tracking-widest text-[#2563EB] shadow-sm">
               Software • Websites • AI
@@ -109,7 +109,7 @@ const demos = [
               </span>
             </h1>
 
-            <p className="mt-5 max-w-xl text-base leading-7 text-slate-600 md:text-lg">
+            <p className="mt-5 max-w-lg text-base leading-7 text-slate-600 md:text-lg">
               Coretix Technologies builds SaaS platforms, booking systems, transport systems, business websites and AI automation.
             </p>
 
