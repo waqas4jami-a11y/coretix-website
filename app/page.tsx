@@ -1,300 +1,296 @@
 export default function Home() {
-  const tmsUrl = "https://transport-management-system-gilt.vercel.app/";
+  const tmsUrl = "https://transport-management-system-gilt.vercel.app";
+  const appointmentUrl = "#contact";
 
-  const software = [
-    {
-      title: "Transport Management System",
-      tag: "Live",
-      text: "Manage school transport, drivers, escorts, students, compliance, live GPS and reports.",
-      demo: `${tmsUrl}/login`,
-      login: `${tmsUrl}/login`,
-    },
-    {
-      title: "Booking Systems",
-      tag: "Available",
-      text: "Online booking systems for salons, clinics, trades and appointment-based businesses.",
-      demo: "#contact",
-      login: "#contact",
-    },
-    {
-      title: "Driving Instructor Diary",
-      tag: "Coming Soon",
-      text: "Digital diary, learner records, lessons, payments and instructor workflow tools.",
-      demo: "#contact",
-      login: "#contact",
-    },
-    {
-      title: "Business Websites",
-      tag: "Available",
-      text: "Modern business websites with contact forms, service pages and professional branding.",
-      demo: "#contact",
-      login: "#contact",
-    },
-    {
-      title: "AI Assistants",
-      tag: "Planned",
-      text: "Customer support chatbots, lead capture tools and AI business automation.",
-      demo: "#contact",
-      login: "#contact",
-    },
-    {
-      title: "Custom Software",
-      tag: "Available",
-      text: "Dashboards, admin portals and internal systems built around your business process.",
-      demo: "#contact",
-      login: "#contact",
-    },
+  const navItems = [
+    ["Products", "#products"],
+    ["Portfolio", "#portfolio"],
+    ["Demo", "#demo"],
+    ["Pricing", "#pricing"],
+    ["Contact", "#contact"],
   ];
 
+  const products = [
+    { icon: "🚛", title: "Transport Management System", text: "Complete SaaS for school transport, drivers, escorts, students, compliance, GPS and reports.", link: `${tmsUrl}/login` },
+    { icon: "📅", title: "Online Appointment System", text: "Booking software for barbers, nail salons, clinics and appointment-based businesses.", link: appointmentUrl },
+    { icon: "📱", title: "Driver & Escort Apps", text: "Mobile route apps with attendance, live tracking and secure job completion.", link: `${tmsUrl}/login` },
+    { icon: "🤖", title: "AI Business Solutions", text: "AI tools, chatbots and automation to help businesses save time.", link: "#contact" },
+    { icon: "🌐", title: "Business Websites", text: "Modern websites for shops, restaurants, instructors and service companies.", link: "#contact" },
+  ];
+
+  const portfolio = [
+    { icon: "🚛", title: "Transport Management System SaaS", type: "Live SaaS Product", text: "Drivers, escorts, students, schools, compliance, GPS tracking and reporting.", link: `${tmsUrl}/login` },
+    { icon: "📅", title: "Online Appointment System", type: "Booking SaaS", text: "Online bookings for salons, clinics, barbers and appointment-based businesses.", link: appointmentUrl },
+    { icon: "🍕", title: "Crust & Flame Online Store", type: "Shopify Website", text: "Online ordering website for pizza, burgers, shakes and grill.", link: "#contact" },
+    { icon: "🌐", title: "Business Website Portfolio", type: "Website Portfolio", text: "Professional websites for local businesses, restaurants and service companies.", link: "#contact" },
+    { icon: "🎓", title: "Driving Instructor Student Diary SaaS", type: "Coming Soon", text: "Student management, lesson diary, payments, progress tracking and instructor tools.", link: "#contact" },
+    { icon: "🤖", title: "AI Business Solutions", type: "Coming Soon", text: "AI assistants, automation and business workflow tools.", link: "#contact" },
+  ];
+const demos = [
+  {
+    icon: "🚛",
+    title: "Transport Management System Demo",
+    text: "See how TMS manages drivers, escorts, students, schools, compliance and daily routes.",
+    button: "View TMS Demo",
+    link: `${tmsUrl}/login`,
+  },
+];
+
   const pricing = [
-    ["Starter Website", "From £100", "Professional website for a small business."],
+    ["Starter Website", "From £99", "Professional website for a small business."],
     ["Business Software", "From £99/month", "Hosted software, dashboard or booking system."],
     ["Custom SaaS", "Custom Quote", "Full custom platform for your business workflow."],
   ];
 
+  const features = [
+    ["☁️", "Cloud Based", "Access your software from anywhere."],
+    ["🔐", "Secure & Reliable", "Login, permissions and data protection."],
+    ["📱", "Mobile Friendly", "Works on laptop, tablet and mobile."],
+    ["🤖", "AI Powered", "Smart automation for better results."],
+    ["🇬🇧", "UK Based Support", "Local support when you need it."],
+  ];
+
   return (
-    <main className="min-h-screen bg-[#FAF7F2] text-[#1F2937]">
-      <header className="sticky top-0 z-50 border-b border-[#E7DED2] bg-[#FFFDF8]/95 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
-          <a href="#" className="flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#163300] text-xl font-black text-[#9FE870] shadow-sm">
-              C
-            </div>
-            <div>
-              <p className="text-xl font-black leading-5 text-[#141D38]">
-                Coretix
-              </p>
-              <p className="text-xs font-bold text-[#64748B]">Technologies</p>
-            </div>
+    <main className="min-h-screen overflow-x-hidden bg-white text-[#0F172A]">
+      <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-4 md:px-5">
+          <a href="#" className="flex min-w-0 items-center">
+            <img
+              src="/logo.png"
+              alt="Coretix Technologies"
+              className="h-20 w-auto max-w-[320px] object-contain md:h-24 md:max-w-[420px]"
+            />
           </a>
 
-          <nav className="hidden items-center gap-7 text-sm font-bold text-[#475569] md:flex">
-            <a href="#software" className="hover:text-[#163300]">Software</a>
-            <a href="#pricing" className="hover:text-[#163300]">Pricing</a>
-            <a href="#policies" className="hover:text-[#163300]">Policies</a>
-            <a href="#contact" className="hover:text-[#163300]">Contact</a>
+          <nav className="hidden items-center gap-6 text-sm font-bold text-slate-700 lg:flex">
+            {navItems.map(([label, href]) => (
+              <a key={label} href={href} className="hover:text-[#2563EB]">
+                {label}
+              </a>
+            ))}
           </nav>
 
           <a
             href={`${tmsUrl}/login`}
-            className="rounded-full bg-[#141D38] px-5 py-3 text-sm font-black text-white shadow-sm hover:bg-[#26304f]"
+            className="hidden rounded-full bg-gradient-to-r from-[#2563EB] to-[#7C3AED] px-6 py-4 text-sm font-black text-white shadow-lg shadow-blue-200 md:block"
           >
             Client Login
           </a>
+
+          <details className="relative lg:hidden">
+            <summary className="list-none rounded-2xl bg-[#EEF2FF] px-4 py-3 text-sm font-black text-[#2563EB]">
+              Menu
+            </summary>
+            <div className="absolute right-0 top-14 w-56 rounded-3xl border border-slate-200 bg-white p-3 shadow-2xl">
+              {navItems.map(([label, href]) => (
+                <a key={label} href={href} className="block rounded-2xl px-4 py-3 text-sm font-bold text-slate-700 hover:bg-[#EEF2FF]">
+                  {label}
+                </a>
+              ))}
+              <a href={`${tmsUrl}/login`} className="mt-2 block rounded-2xl bg-gradient-to-r from-[#2563EB] to-[#7C3AED] px-4 py-3 text-center text-sm font-black text-white">
+                Client Login
+              </a>
+            </div>
+          </details>
         </div>
       </header>
 
-      <section className="mx-auto grid max-w-7xl gap-8 px-5 py-10 md:grid-cols-[230px_1fr] md:py-14">
-        <aside className="hidden md:block">
-          <div className="sticky top-28 rounded-3xl border border-[#E7DED2] bg-white/80 p-4 shadow-sm">
-            <p className="mb-3 px-3 text-xs font-black uppercase tracking-widest text-[#94A3B8]">
-              Main Menu
-            </p>
-
-            {[
-              ["Overview", "#"],
-              ["Software", "#software"],
-              ["Pricing", "#pricing"],
-              ["Policies", "#policies"],
-              ["Book Demo", "#contact"],
-            ].map(([label, link]) => (
-              <a
-                key={label}
-                href={link}
-                className="mb-1 block rounded-2xl px-3 py-3 text-sm font-bold text-[#475569] transition hover:bg-[#EEF7E8] hover:text-[#163300]"
-              >
-                {label}
-              </a>
-            ))}
-          </div>
-        </aside>
-
-        <div>
-          <section className="rounded-[28px] border border-[#E7DED2] bg-[#FFFDF8] p-6 shadow-sm md:p-9">
-            <div className="inline-flex rounded-full bg-[#EEF7E8] px-4 py-2 text-xs font-black uppercase tracking-wide text-[#163300]">
-              Websites • Software • Automation
+      <section className="bg-gradient-to-br from-white via-[#F8FAFC] to-[#F3F0FF]">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 py-10 md:px-5 md:py-14 lg:grid-cols-2">
+          <div>
+            <div className="inline-flex rounded-full border border-blue-100 bg-white px-4 py-2 text-[11px] font-black uppercase tracking-widest text-[#2563EB] shadow-sm">
+              Software • Websites • AI
             </div>
 
-            <h1 className="mt-5 max-w-3xl text-3xl font-black leading-tight tracking-tight text-[#141D38] md:text-5xl">
-              Business software and websites built for growing companies.
+            <h1 className="mt-5 text-3xl font-black leading-tight tracking-tight sm:text-4xl md:text-5xl">
+              Smart Software for{" "}
+              <span className="bg-gradient-to-r from-[#2563EB] to-[#7C3AED] bg-clip-text text-transparent">
+                Growing Businesses
+              </span>
             </h1>
 
-            <p className="mt-5 max-w-2xl text-base leading-7 text-[#64748B]">
-              Coretix Technologies builds modern systems for transport companies,
-              booking businesses, service providers and growing teams that need
-              reliable software, clean websites and smart automation.
+            <p className="mt-5 max-w-xl text-base leading-7 text-slate-600 md:text-lg">
+              Coretix Technologies builds SaaS platforms, booking systems, transport systems, business websites and AI automation.
             </p>
 
-            <div className="mt-7 flex flex-wrap gap-3">
-              <a
-                href="#software"
-                className="rounded-2xl bg-[#163300] px-6 py-3 font-black text-[#9FE870] transition hover:-translate-y-0.5 hover:shadow-lg"
-              >
-                View Software
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <a href="#demo" className="rounded-2xl bg-gradient-to-r from-[#2563EB] to-[#7C3AED] px-6 py-4 text-center font-black text-white shadow-xl shadow-blue-200">
+                View Demos
               </a>
-              <a
-                href="#contact"
-                className="rounded-2xl border border-[#D6CCBE] bg-white px-6 py-3 font-black text-[#141D38] transition hover:-translate-y-0.5 hover:shadow-lg"
-              >
-                Book Demo
-              </a>
-              <a
-                href={`${tmsUrl}/login`}
-                className="rounded-2xl bg-[#FCDB32] px-6 py-3 font-black text-[#141D38] transition hover:-translate-y-0.5 hover:shadow-lg"
-              >
-                TMS Login
+              <a href="#portfolio" className="rounded-2xl border border-slate-200 bg-white px-6 py-4 text-center font-black shadow-sm">
+                View Portfolio
               </a>
             </div>
-          </section>
+          </div>
 
-          <section id="software" className="py-12">
-            <div className="mb-7">
-              <p className="text-xs font-black uppercase tracking-widest text-[#163300]">
-                Software We Sell
-              </p>
-              <h2 className="mt-2 text-3xl font-black text-[#141D38]">
-                Systems built for real business workflow.
-              </h2>
-            </div>
+          <div className="mx-auto w-full max-w-[430px] lg:max-w-[500px]">
+            <div className="rounded-[1.7rem] border border-slate-200 bg-white p-3 shadow-2xl">
+              <div className="rounded-[1.3rem] bg-[#0F172A] p-3">
+                <div className="rounded-2xl bg-white p-4">
+                  <div className="mb-4 flex items-center justify-between gap-2">
+                    <div>
+                      <p className="text-[10px] font-black uppercase text-slate-400">Coretix Dashboard</p>
+                      <h3 className="text-lg font-black">Business Overview</h3>
+                    </div>
+                    <div className="rounded-xl bg-[#EEF2FF] px-3 py-2 text-xs font-black text-[#2563EB]">Live</div>
+                  </div>
 
-            <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-              {software.map((item) => (
-                <div
-                  key={item.title}
-                  className="group rounded-3xl border border-[#E7DED2] bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-[#9FE870] hover:shadow-xl"
-                >
-                  <span className="rounded-full bg-[#E4E4FF] px-3 py-1 text-xs font-black text-[#141D38]">
-                    {item.tag}
-                  </span>
+                  <div className="grid grid-cols-4 gap-2">
+                    {["12", "56", "24", "98%"].map((num, i) => (
+                      <div key={num} className="rounded-xl bg-[#F8FAFC] p-2">
+                        <p className="text-[10px] font-bold text-slate-400">{["Jobs", "Users", "Book", "Uptime"][i]}</p>
+                        <p className="mt-1 text-lg font-black text-[#2563EB] md:text-xl">{num}</p>
+                      </div>
+                    ))}
+                  </div>
 
-                  <h3 className="mt-5 text-xl font-black text-[#141D38]">
-                    {item.title}
-                  </h3>
+                  <div className="mt-4 rounded-2xl bg-gradient-to-r from-[#EEF2FF] to-[#F5F3FF] p-4">
+                    <div className="flex h-20 items-end gap-2 md:h-24">
+                      {[35, 55, 45, 70, 60, 85, 75].map((h, i) => (
+                        <div key={i} className="w-full rounded-t-xl bg-gradient-to-t from-[#2563EB] to-[#7C3AED]" style={{ height: `${h}%` }} />
+                      ))}
+                    </div>
+                  </div>
 
-                  <p className="mt-3 min-h-[96px] leading-7 text-[#64748B]">
-                    {item.text}
-                  </p>
-
-                  <div className="mt-5 flex gap-3">
-                    <a
-                      href={item.demo}
-                      className="rounded-xl bg-[#163300] px-4 py-3 text-sm font-black text-[#9FE870] transition group-hover:bg-[#0f2400]"
-                    >
-                      Demo
-                    </a>
-                    <a
-                      href={item.login}
-                      className="rounded-xl border border-[#D6CCBE] px-4 py-3 text-sm font-black text-[#141D38] transition hover:bg-[#FAF7F2]"
-                    >
-                      Login
-                    </a>
+                  <div className="mt-4 grid gap-2">
+                    {["TMS route completed", "New booking received"].map((item) => (
+                      <div key={item} className="flex items-center justify-between rounded-xl border border-slate-100 p-3">
+                        <span className="text-sm font-bold text-slate-600">{item}</span>
+                        <span className="h-3 w-3 rounded-full bg-[#7C3AED]" />
+                      </div>
+                    ))}
                   </div>
                 </div>
-              ))}
-            </div>
-          </section>
-
-          <section id="pricing" className="py-10">
-            <div className="mb-7">
-              <p className="text-xs font-black uppercase tracking-widest text-[#163300]">
-                Pricing
-              </p>
-              <h2 className="mt-2 text-3xl font-black text-[#141D38]">
-                Simple starting prices.
-              </h2>
-              <p className="mt-3 text-[#64748B]">
-                Final pricing depends on setup, features, hosting and support.
-              </p>
-            </div>
-
-            <div className="grid gap-5 md:grid-cols-3">
-              {pricing.map(([name, price, text]) => (
-                <div
-                  key={name}
-                  className="rounded-3xl border border-[#E7DED2] bg-[#FFFDF8] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
-                >
-                  <h3 className="text-xl font-black text-[#141D38]">{name}</h3>
-                  <p className="mt-4 text-3xl font-black text-[#163300]">
-                    {price}
-                  </p>
-                  <p className="mt-3 text-[#64748B]">{text}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section
-            id="policies"
-            className="my-10 rounded-[28px] border border-[#E7DED2] bg-white p-6 shadow-sm md:p-8"
-          >
-            <p className="text-xs font-black uppercase tracking-widest text-[#163300]">
-              Policies
-            </p>
-            <h2 className="mt-2 text-3xl font-black text-[#141D38]">
-              Secure, professional and transparent.
-            </h2>
-
-            <div className="mt-6 grid gap-5 md:grid-cols-2">
-              {[
-                ["Privacy Policy", "Customer and business data is handled carefully and used only for agreed services."],
-                ["Software Trial Terms", "Trial access can be offered before a full subscription or project agreement."],
-                ["Support Policy", "Support is provided for agreed plans, bug fixes and business-critical issues."],
-                ["Data Security", "Systems use authenticated access, company isolation and controlled permissions."],
-              ].map(([title, text]) => (
-                <div
-                  key={title}
-                  className="rounded-2xl bg-[#FAF7F2] p-5 transition hover:bg-[#EEF7E8]"
-                >
-                  <h3 className="font-black text-[#141D38]">{title}</h3>
-                  <p className="mt-2 leading-7 text-[#64748B]">{text}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section id="contact" className="py-10">
-            <div className="rounded-[28px] bg-[#141D38] p-7 text-white shadow-xl md:p-10">
-              <h2 className="text-3xl font-black">
-                Ready to build your next business system?
-              </h2>
-              <p className="mt-4 max-w-2xl leading-7 text-slate-300">
-                Contact Coretix Technologies for websites, booking systems,
-                transport software, dashboards and custom business tools.
-              </p>
-
-              <div className="mt-7 grid gap-4 md:grid-cols-3">
-                <a
-                  href="mailto:coretixtech@gmail.com"
-                  className="rounded-2xl bg-white/10 p-5 font-black transition hover:bg-white/20"
-                >
-                 coretixtech@gmail.com
-                </a>
-                <a
-                  href="tel:+447949904412"
-                  className="rounded-2xl bg-white/10 p-5 font-black transition hover:bg-white/20"
-                >
-                  +447949904412
-                </a>
-                <a
-                  href={`${tmsUrl}/login`}
-                  className="rounded-2xl bg-[#FCDB32] p-5 text-center font-black text-[#141D38] transition hover:bg-[#ffe45c]"
-                >
-                  Open TMS Login
-                </a>
               </div>
             </div>
-          </section>
+          </div>
         </div>
       </section>
 
-      <footer className="border-t border-[#E7DED2] bg-[#FFFDF8] px-5 py-8 text-center text-sm text-[#64748B]">
-        <p className="font-bold text-[#141D38]">Coretix Technologies</p>
-        <p className="mt-2">
-          © {new Date().getFullYear()} Coretix Technologies. All rights reserved.
-        </p>
-        <p className="mt-1">
-          Business software, websites, automation and SaaS solutions.
-        </p>
+      <section id="products" className="mx-auto max-w-7xl px-4 py-14 md:px-5">
+        <p className="text-sm font-black uppercase tracking-widest text-[#7C3AED]">Our Products</p>
+        <h2 className="mt-3 text-3xl font-black md:text-4xl">Software products built for real business workflow</h2>
+
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+          {products.map((item) => (
+            <a key={item.title} href={item.link} className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-2 hover:border-[#7C3AED] hover:shadow-xl">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#EEF2FF] text-2xl">{item.icon}</div>
+              <h3 className="mt-5 text-lg font-black">{item.title}</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">{item.text}</p>
+              <p className="mt-5 text-sm font-black text-[#2563EB]">Learn More →</p>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section id="portfolio" className="bg-[#F8FAFC] px-4 py-14 md:px-5">
+        <div className="mx-auto max-w-7xl">
+          <p className="text-sm font-black uppercase tracking-widest text-[#2563EB]">Portfolio</p>
+          <h2 className="mt-3 text-3xl font-black md:text-4xl">Projects we are building</h2>
+
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {portfolio.map((item) => (
+              <a key={item.title} href={item.link} className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-2 hover:shadow-xl">
+                <div className="text-4xl">{item.icon}</div>
+                <p className="mt-5 text-xs font-black uppercase tracking-widest text-[#7C3AED]">{item.type}</p>
+                <h3 className="mt-3 text-xl font-black">{item.title}</h3>
+                <p className="mt-3 leading-7 text-slate-600">{item.text}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="demo" className="mx-auto max-w-7xl px-4 py-14 md:px-5">
+        <p className="text-sm font-black uppercase tracking-widest text-[#7C3AED]">Demos</p>
+        <h2 className="mt-3 text-3xl font-black md:text-4xl">See Coretix software in action</h2>
+
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
+          {demos.map((demo) => (
+            <div key={demo.title} className="rounded-[2rem] border border-slate-200 bg-gradient-to-br from-white to-[#F5F3FF] p-5 shadow-sm md:p-6">
+              <video
+  controls
+  className="aspect-video w-full rounded-[1.5rem]"
+  preload="metadata"
+>
+  <source
+    src="/videos/tms-demo.mp4"
+    type="video/mp4"
+  />
+</video>
+                 
+              <h3 className="mt-6 text-2xl font-black">{demo.title}</h3>
+              <p className="mt-3 leading-7 text-slate-600">{demo.text}</p>
+              <a href={demo.link} className="mt-6 inline-flex rounded-2xl bg-gradient-to-r from-[#2563EB] to-[#7C3AED] px-6 py-3 font-black text-white shadow-lg shadow-blue-200">
+                {demo.button}
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="pricing" className="bg-[#F8FAFC] px-4 py-14 md:px-5">
+        <div className="mx-auto max-w-7xl">
+          <p className="text-sm font-black uppercase tracking-widest text-[#2563EB]">Pricing</p>
+          <h2 className="mt-3 text-3xl font-black md:text-4xl">Simple starting prices</h2>
+
+          <div className="mt-8 grid gap-5 md:grid-cols-3">
+            {pricing.map(([name, price, text]) => (
+              <div key={name} className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+                <h3 className="text-xl font-black">{name}</h3>
+                <p className="mt-4 text-3xl font-black text-[#7C3AED]">{price}</p>
+                <p className="mt-3 text-slate-600">{text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="why" className="mx-auto max-w-7xl px-4 py-14 md:px-5">
+        <p className="text-sm font-black uppercase tracking-widest text-[#2563EB]">Why Choose Coretix</p>
+        <h2 className="mt-3 text-3xl font-black md:text-4xl">Modern, secure and business-ready</h2>
+
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+          {features.map(([icon, title, text]) => (
+            <div key={title} className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <div className="text-3xl">{icon}</div>
+              <h3 className="mt-4 font-black">{title}</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">{text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="contact" className="px-4 py-14 md:px-5">
+        <div className="mx-auto w-full max-w-7xl overflow-hidden rounded-[2rem] bg-[#0F172A] p-5 text-white shadow-2xl md:p-12">
+          <div className="grid min-w-0 gap-6 md:grid-cols-2">
+            <div className="min-w-0">
+              <p className="text-sm font-black uppercase tracking-widest text-blue-300">Contact Coretix</p>
+              <h2 className="mt-3 text-3xl font-black md:text-4xl">Ready to build your next business system?</h2>
+              <p className="mt-4 leading-7 text-slate-300">
+                Contact Coretix Technologies for SaaS software, booking systems, websites, AI automation and custom business tools.
+              </p>
+            </div>
+
+            <div className="grid min-w-0 gap-4">
+              <a href="mailto:coretixtech@gmail.com" className="block w-full max-w-full break-words rounded-2xl bg-white/10 px-4 py-5 text-sm font-black transition hover:bg-white/20 sm:text-base">
+                coretixtech@gmail.com
+              </a>
+              <a href="tel:+447949904412" className="block w-full rounded-2xl bg-white/10 px-4 py-5 text-sm font-black transition hover:bg-white/20 sm:text-base">
+                +44 7949 904412
+              </a>
+              <a href={`${tmsUrl}/login`} className="block w-full rounded-2xl bg-white px-4 py-5 text-center text-sm font-black text-[#2563EB] transition hover:bg-blue-50 sm:text-base">
+                Open Client Login
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="border-t border-slate-200 bg-white px-4 py-8 text-center text-sm text-slate-500">
+        <p className="font-black text-[#0F172A]">CORETIX Technologies</p>
+        <p className="mt-2">© {new Date().getFullYear()} Coretix Technologies. All rights reserved.</p>
+        <p className="mt-1">SaaS software, websites, AI automation and business systems.</p>
       </footer>
     </main>
   );
